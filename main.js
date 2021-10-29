@@ -1,11 +1,11 @@
 // Chiedo all'utente di scegliere pari o dispari 
-const pairOdd = prompt('Scegli pari o dispari');
+const evenOdd = prompt('Scegli pari o dispari');
 let validChoice = false;
 
 
-if(pairOdd === 'pari' || pairOdd === 'dispari'){
+if(evenOdd === 'pari' || evenOdd === 'dispari'){
     validChoice = true;
-    console.log(`hai scelto ${pairOdd}`);
+    console.log(`hai scelto ${evenOdd}`);
 }
 
 console.log(validChoice);
@@ -17,17 +17,17 @@ if (nUser > 5 || nUser < 0) {
 }
 
 // Creo la funzione per generare il numero del PC 
-function generateNum(num){
-    let risultato = (Math.floor((Math.random() * num ) + 1));
+function generateNum(min, max){
+    let risultato = (Math.floor((Math.random() * max ) + min));
 
     return risultato;
 
 }
 
 // Creo la costante utilizzando la funzione 
-const nPC = generateNum(5);
+const nPC = generateNum(1, 5);
 console.log(`il numero del pc è ${nPC}`);
-
+console.log(nPC);
 const total = nUser + nPC;
 console.log(`il totale è ${total}`);
 
@@ -57,7 +57,7 @@ function vincitore(num){
 }
 
 // Determino la costante per dichiarare il vincitore 
-const win = vincitore(pairOdd);
+const win = vincitore(evenOdd);
 
 console.log(`questo il risultato ${win}`);
 
