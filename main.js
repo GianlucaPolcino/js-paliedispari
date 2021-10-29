@@ -1,5 +1,6 @@
 // Chiedo all'utente di scegliere pari o dispari 
 const pairOdd = prompt('Scegli pari o dispari');
+let validChoice = false;
 
 
 if(pairOdd === 'pari' || pairOdd === 'dispari'){
