@@ -59,7 +59,29 @@ function vincitore(num){
 // Determino la costante per dichiarare il vincitore 
 const win = vincitore(evenOdd);
 
-console.log(`questo il risultato ${win}`);
+console.log(`questo il risultato: ${win}`);
+
+// Chiedo all'utente di scrivere una parola 
+const isPalindrome = prompt('scrivi una parola e ti dirò se è palindroma');
+console.log(isPalindrome);
+
+function checkPalindrome(word) {
+    // determino la lunghezza della parola
+    const len = word.length;
+    // creo un ciclo dividendo la parola a metà
+    for (let i = 0; i < len / 2; i++) {
+      // controllo ogni uguaglianza tra la prima lettera e l'ultima
+     // se l'if è diverso non è un palindromo, altrimenti lo è
+      if (word[i] !== word[len - 1 - i]) {
+        return console.log("non è un palindromo");
+      }
+    }
+    return console.log("è una parola palindroma");
+  }
+
+const result = checkPalindrome(isPalindrome);
+
+
 
 
 
